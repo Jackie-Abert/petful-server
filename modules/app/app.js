@@ -5,7 +5,7 @@ const { NODE_ENV } = require('../config');
 const app = express()
 
 app.use(cors({
-    origin: config.CLIENT_ORIGIN
+    origin: CLIENT_ORIGIN
 }));
 
 app.use('/people', require('../people/people.router'))
