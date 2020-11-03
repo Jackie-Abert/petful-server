@@ -1,7 +1,7 @@
 'use strict';
 require('dotenv').config();
 const express = require('express')
-const cors = require('cors')
+// const cors = require('cors')
 //const { CLIENT_ORIGIN } = require('../config');
 const { NODE_ENV } = require('../config');
 const app = express()
@@ -9,19 +9,19 @@ const app = express()
 app.use(helmet());
 
 // whitelist allowed origins
-const allowedOrigins = ['http://localhost:3000', 'https://dsa-petful-client.jackie-abert.vercel.app'];
-app.use(cors({
-  origin: function(origin, callback){
-    // allow requests with no origin - like mobile apps, curl, postman
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      const msg = 'The CORS policy for this site does not ' +
-                  'allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
-    return callback(null, true);
-  }
-}));
+// const allowedOrigins = ['http://localhost:3000', 'https://dsa-petful-client.jackie-abert.vercel.app'];
+// app.use(cors({
+//   origin: function(origin, callback){
+//     // allow requests with no origin - like mobile apps, curl, postman
+//     if(!origin) return callback(null, true);
+//     if(allowedOrigins.indexOf(origin) === -1){
+//       const msg = 'The CORS policy for this site does not ' +
+//                   'allow access from the specified Origin.';
+//       return callback(new Error(msg), false);
+//     }
+//     return callback(null, true);
+//   }
+// }));
 
 // app.use(cors({
 //     origin: CLIENT_ORIGIN
