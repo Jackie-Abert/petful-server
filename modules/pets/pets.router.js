@@ -9,7 +9,6 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   // Return all pets currently up for adoption.
-  res.header('Access-Control-Allow-Origin', '*')
   const pets = Pets.get()
   res.status(200).json(pets);
 });
@@ -21,7 +20,6 @@ router.delete('/', json, (req, res) => {
 });
 
 router.get("/cat", (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*')
   res.status(200).json();
 });
 
