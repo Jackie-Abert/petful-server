@@ -13,3 +13,9 @@ Client Link: [https://github.com/Jackie-Abert/petful-client](https://github.com/
 # Created By
 
 Jackie Abert
+
+# Tech Stack
+Node.js
+Express
+CORS
+PG
